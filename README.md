@@ -71,7 +71,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 Sanzhar Nussipbek - [@qdev](https://www.linkedin.com/in/qdev/) - nsanzhar.99@gmail.com
 
-Project Link: [https://github.com/kindageek/talent-labs](https://github.com/kindageek/talent-labs)
+Project Link: [Live Demo](https://talent-labs-phi.vercel.app)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
