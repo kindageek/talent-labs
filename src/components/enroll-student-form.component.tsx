@@ -19,8 +19,8 @@ type Props = {
 
 const styles = {
   container:
-    'overflow-y-hidden overflow-x-hidden fixed top-0 right-0 left-0 z-1 w-full md:inset-0 flex justify-center items-center',
-  content: 'relative p-4 w-full max-w-2xl h-auto',
+    'overflow-y-hidden overflow-x-hidden fixed top-0 right-0 left-0 z-20 w-screen h-screen md:inset-0 flex justify-center items-center',
+  content: 'relative p-4 w-full max-w-2xl h-auto z-20',
   form: 'relative bg-white shadow py-4 px-16 rounded-lg',
   header: 'flex flex-col justify-center items-center p-4 rounded-t border-b',
   body: 'w-full py-6 space-y-6',
@@ -117,7 +117,11 @@ const EnrollStudentForm: React.FC<Props> = ({ open, onClose }) => {
   if (!open) return null;
 
   return (
-    <div tabIndex={-1} className={styles.container}>
+    <div className={styles.container}>
+      <div
+        className="fixed top-0 left-0 w-screen h-screen bg-black opacity-50 z-10"
+        onClick={onClose}
+      />
       <div className={styles.content}>
         <form
           onSubmit={handleSubmit(onSubmit)}
