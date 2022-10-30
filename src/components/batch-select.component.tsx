@@ -21,13 +21,21 @@ type Props = {
   onChange: (values: string[]) => void;
 };
 
-const BatchSelectItem: React.FC<{
+type BatchSelectItemProps = {
   index: number;
   value: string;
   onClear: (index: number) => void;
   onChange: (index: number, value: string) => void;
   selectedValues: string[];
-}> = ({ index, value, onClear, onChange, selectedValues }) => {
+};
+
+const BatchSelectItem: React.FC<BatchSelectItemProps> = ({
+  index,
+  value,
+  onClear,
+  onChange,
+  selectedValues,
+}) => {
   const handleClear = () => {
     onClear(index);
   };
@@ -37,12 +45,13 @@ const BatchSelectItem: React.FC<{
   };
 
   return (
-    <div className="flex justify-between items-center mb-4 w-full">
+    <div className="flex justify-between items-center mb-4 w-full batch-select-item">
       <Select
         value={value}
         onChange={handleItemSelect}
         name={`course-${index}`}
         options={MONTHS}
+        placeholder="Chooe a batch month"
         onClear={() => onChange(index, '')}
         selectedValues={selectedValues}
       />
@@ -102,6 +111,7 @@ const BatchSelect: React.FC<Props> = ({ batchList, onChange }) => {
         ))}
       </div>
       <button
+        id="batch-select-add-btn"
         type="button"
         onClick={addMore}
         className="text-gray-900 flex items-center disabled:text-gray-400"

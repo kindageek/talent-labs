@@ -24,7 +24,7 @@ const styles = {
   form: 'relative bg-white shadow py-4 px-16 rounded-lg',
   header: 'flex flex-col justify-center items-center p-4 rounded-t border-b',
   body: 'w-full py-6 space-y-6',
-  row: 'w-full gap-4 flex justify-between items-center',
+  row: 'w-full gap-4 flex justify-between items-start',
   actions:
     'flex justify-between items-center w-full py-6 pr-0 space-x-2 rounded-b border-t border-gray-200',
   btns: 'flex items-center',
@@ -217,6 +217,7 @@ const EnrollStudentForm: React.FC<Props> = ({ open, onClose }) => {
           <div className={styles.actions}>
             <div className={styles.btns}>
               <button
+                id="copy-btn"
                 type="button"
                 className={`${
                   copied ? 'text-green-500' : 'text-gray-900 btn-text'
@@ -229,6 +230,7 @@ const EnrollStudentForm: React.FC<Props> = ({ open, onClose }) => {
             </div>
             <div className={styles.btns}>
               <button
+                id="cancel-btn"
                 onClick={onClose}
                 type="button"
                 className={styles.cancelBtn}
@@ -236,6 +238,7 @@ const EnrollStudentForm: React.FC<Props> = ({ open, onClose }) => {
                 Cancel
               </button>
               <button
+                id="submit-btn"
                 type="submit"
                 form="enroll-student-form"
                 className={styles.submitBtn}
