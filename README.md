@@ -69,7 +69,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Sanzhar Nussipbek - [@qdev](https://www.linkedin.com/in/qdev/) - nsanzhar.99@gmail.com
+Sanzhar Nussipbek - [@kindadev](https://www.linkedin.com/in/kindadev/) - nsanzhar.99@gmail.com
 
 Project Link: [Live Demo](https://talent-labs-phi.vercel.app)
 
